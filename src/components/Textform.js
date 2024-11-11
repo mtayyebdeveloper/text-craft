@@ -21,7 +21,6 @@ export default function Textform(props) {
   };
 
   let textchanged = (event) => {
-    console.log("wow");
     updatetext(event.target.value);
   };
 
@@ -67,46 +66,46 @@ export default function Textform(props) {
             value={text}
           ></textarea>
         </div>
-        <div className="submits-btn d-flex flex-wrap">
+        <div className="submits-btn d-flex flex-wrap gap-2">
           <button
             disabled={text.length === 0}
             onClick={speakTextBtn}
-            className="btn btn-outline-primary me-2"
+            className="btn btn-outline-primary"
           >
-            Speak Text
+            Speak
           </button>
           <button
             disabled={text.length === 0}
             onClick={btnuppercase}
-            className="btn btn-outline-primary me-2"
+            className="btn btn-outline-primary"
           >
-            Convert to Uppercase
+            Uppercase
           </button>
           <button
             disabled={text.length === 0}
             onClick={btnlowercase}
-            className="btn btn-outline-primary me-2"
+            className="btn btn-outline-primary"
           >
-            Conver to Lowercase
+            Lowercase
           </button>
           <button
             disabled={text.length === 0}
             onClick={copytext}
-            className="btn btn-outline-primary me-2"
+            className="btn btn-outline-primary"
           >
             Copy
           </button>
           <button
             disabled={text.length === 0}
             onClick={removespaces}
-            className="btn btn-outline-primary me-2"
+            className="btn btn-outline-primary"
           >
             remove extra spaces
           </button>
           <button
             disabled={text.length === 0}
             onClick={cleartext}
-            className="btn btn-outline-primary me-2"
+            className="btn btn-outline-primary"
           >
             Clear
           </button>
