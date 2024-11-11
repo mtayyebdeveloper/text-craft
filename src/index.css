@@ -14,3 +14,12 @@ code {
 .accordion-button::after {
   filter: invert(1);
 }
+.cursor-pointer {
+  cursor: pointer;
+}
+.box-white::placeholder{
+  color: white !important;
+}
+.box-black::placeholder{
+  color: black !important;
+}

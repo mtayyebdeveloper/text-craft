@@ -53,59 +53,60 @@ export default function Textform(props) {
         </h1>
         <div className="mb-3">
           <textarea
-            className={`form-control text-${
+            className={`form-control ${props.lightmood==="light"?"box-black":"box-white"} text-${
               props.lightmood === "light" ? "dark" : "light"
             }`}
             style={{
               backgroundColor:
-                props.lightmood === "light" ? "white" : "#042749",
+                props.lightmood === "light" ? "white" : "rgb(64,65,69)",
             }}
             id="text"
             rows="5"
             onChange={textchanged}
             value={text}
+            placeholder="Enter your text here..."
           ></textarea>
         </div>
         <div className="submits-btn d-flex flex-wrap gap-2">
           <button
             disabled={text.length === 0}
             onClick={speakTextBtn}
-            className="btn btn-outline-primary"
+            className="btn btn-outline-warning"
           >
             Speak
           </button>
           <button
             disabled={text.length === 0}
             onClick={btnuppercase}
-            className="btn btn-outline-primary"
+            className="btn btn-outline-warning"
           >
             Uppercase
           </button>
           <button
             disabled={text.length === 0}
             onClick={btnlowercase}
-            className="btn btn-outline-primary"
+            className="btn btn-outline-warning"
           >
             Lowercase
           </button>
           <button
             disabled={text.length === 0}
             onClick={copytext}
-            className="btn btn-outline-primary"
+            className="btn btn-outline-warning"
           >
             Copy
           </button>
           <button
             disabled={text.length === 0}
             onClick={removespaces}
-            className="btn btn-outline-primary"
+            className="btn btn-outline-warning"
           >
             remove extra spaces
           </button>
           <button
             disabled={text.length === 0}
             onClick={cleartext}
-            className="btn btn-outline-primary"
+            className="btn btn-outline-warning"
           >
             Clear
           </button>
