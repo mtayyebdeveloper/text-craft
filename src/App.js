@@ -40,7 +40,7 @@ function App() {
   return (
     <Router>
         <Navbar
-          site_title="M T Developer"
+          site_title="TextCraft"
           lightmood={lightmood}
           lightbtn={lightbtn}
           btntext={btntext}
