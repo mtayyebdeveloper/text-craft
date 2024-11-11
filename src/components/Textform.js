@@ -9,6 +9,11 @@ export default function Textform(props) {
     props.alarts("Success","Text converted to UpperCase");
   };
 
+  let speakTextBtn =()=>{
+    let msg = new SpeechSynthesisUtterance(text);
+    window.speechSynthesis.speak(msg);
+  }
+
   let btnlowercase = () => {
     let newtext = text.toLowerCase();
     updatetext(newtext);
@@ -54,6 +59,13 @@ export default function Textform(props) {
             ></textarea>
           </div>
           <div className="submits-btn d-flex">
+          <button
+            disabled={text.length===0}
+              onClick={speakTextBtn}
+              className="btn btn-outline-primary me-2"
+            >
+              Speak Text
+            </button>
             <button
             disabled={text.length===0}
               onClick={btnuppercase}
